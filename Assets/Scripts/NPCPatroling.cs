@@ -105,6 +105,13 @@ public class NPCPatroling : MonoBehaviour
         }
         if (_patrolForward)
         {
+            // _currentPatrolIndex++;
+            //if(_currentPatrolIndex >= _patrolPoints.count)
+            //{
+            // _currentPatrolIndex = 0;
+            //}
+            //can also do same as above code 
+            //currentpatrol index + 1 then checking if current index exceeeds parreol points if so reset to zero :-)
             _currentPatrolIndex = (_currentPatrolIndex + 1) % _patrolPoints.Count;
         }
         else
