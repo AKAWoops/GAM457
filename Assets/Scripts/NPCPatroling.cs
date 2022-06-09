@@ -42,7 +42,7 @@ public class NPCPatroling : MonoBehaviour
             if (_patrolPoints != null && _patrolPoints.Count >= 2)
             {
                 _currentPatrolIndex = 0;
-                setDestination();
+                SetDestination();
             }
             else
             {
@@ -91,7 +91,7 @@ public class NPCPatroling : MonoBehaviour
     {
         if(_patrolPoints != null)
         {
-            Vector3 tragetvector = _patrolPoints[_currentPatrolIndex].transform.position;
+            Vector3 targetVector = _patrolPoints[_currentPatrolIndex].transform.position;
             _navMeshAgent.SetDestination(targetVector);
             _travelling = true;
         }
