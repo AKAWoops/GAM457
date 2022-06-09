@@ -116,6 +116,15 @@ public class NPCPatroling : MonoBehaviour
         }
         else
         {
+            /*
+             * _currentPatrolIndex--;
+             * 
+             * if(currentPatrolIndex < 0)
+             * {
+             *      _currentPatrolIndex = _patrolPoints.Count - 1;
+             * }
+             */
+            //changed to a smaller line of code it works better
             if (--_currentPatrolIndex < 0)
             {
                 _currentPatrolIndex = _patrolPoints.Count - 1;
