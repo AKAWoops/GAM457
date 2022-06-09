@@ -41,7 +41,7 @@ namespace Assets.Code
             }
         }
 
-        public overide void OnDrawGizmos()
+        public override void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(transform.position, debugDrawRadius);
