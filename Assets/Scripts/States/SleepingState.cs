@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using DG.Tweening;
 using UnityEngine;
+
 
 public class SleepingState : StateBase
 {
+   //[SerializeField]
+   // private int EnergyManager = 10;
+
     public float regenEnergySpeed = 4f;
 
     private void OnEnable()
@@ -14,12 +20,12 @@ public class SleepingState : StateBase
 
     private void OnDisable()
     {
-        transform.DOROtate(new Vector3(0, 0, 0f), 0.6f);
+        transform.DORotate(new Vector3(0, 0, 0f), 0.6f);
     }
 
     //update is called once per frame
     void update()
     {
-        GetComponent<Energy>().energyAmount += regenEnergySpeed * Time.deltaTime;
+        GetComponent<Energy>().EnergyAmount += regenEnergySpeed * Time.deltaTime;
     }
 }
