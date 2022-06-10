@@ -25,11 +25,11 @@ namespace Assets.Code
 
         //private variables for the base behaviour
         NavMeshAgent _navMeshAgent;
-        ConnectedWayPoints _currentWaypoint;
-        ConnectedWayPoints _previousWaypoint;
+        ConnectedWayPoint _currentWaypoint;
+        ConnectedWayPoint _previousWaypoint;
 
         bool _travelling;
-        bol _waiting;
+        bool _waiting;
         float _waitTimer;
         int _waypointsVisited;
 
@@ -56,7 +56,7 @@ namespace Assets.Code
                         while (_currentWaypoint == null)
                         {
                             int random = UnityEngine.Random.Range(0, allWaypoints.Length);
-                            ConnectedWayPoints startingWaypoint = allWaypoints[random].GetComponent<ConnectedWaypoint>();
+                            ConnectedWayPoint startingWaypoint = allWaypoints[random].GetComponent<ConnectedWayPoint>();
 
                             if (startingWaypoint != null)
                             {
@@ -110,7 +110,7 @@ namespace Assets.Code
         {
             if (_waypointsVisited > 0)
             {
-                ConnectedWayPoints nextWaypoint = _currentWaypoint.NextWaypoint(_previousWaypoint);
+                ConnectedWayPoint nextWaypoint = _currentWaypoint.NextWaypoint(_previousWaypoint);
                 _previousWaypoint = _currentWaypoint;
                 _currentWaypoint = nextWaypoint;
             }

@@ -9,12 +9,12 @@ using UnityEngine.AI;
 
 namespace Assets.Code
 {
-    public class ConnectedWayPoints : Waypoint
+    public class ConnectedWayPoint : Waypoint
     {
         [SerializeField]
         protected float _connectivityRadius = 50f;
 
-        List<ConnectedWayPoints> _connections;
+        List<ConnectedWayPoint> _connections;
 
         // Start is called before the first frame update
         public void Start()
@@ -23,12 +23,12 @@ namespace Assets.Code
             GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("Waypoint");
 
             //Create a list of the waypoionts detected you can refer to later.
-            _connections = new List<ConnectedWayPoints>();
+            _connections = new List<ConnectedWayPoint>();
 
             //Now check if they are a connected waypoint.
             for (int i = 0; i < allWaypoints.Length; i++)
             {
-                ConnectedWayPoints nextWaypoint = allWaypoints[i].GetComponent<ConnectedWayPoints>();
+                ConnectedWayPoint nextWaypoint = allWaypoints[i].GetComponent<ConnectedWayPoint>();
 
                 // we have found the waypoint
                 if (nextWaypoint != null)
@@ -49,7 +49,7 @@ namespace Assets.Code
             Gizmos.color = Color.yellow;
             Gizmos.DrawSphere(transform.position, _connectivityRadius);
         }
-        public ConnectedWayPoints NextWaypoint(ConnectedWayPoints previousWaypoint)
+        public ConnectedWayPoint NextWaypoint(ConnectedWayPoint previousWaypoint)
         {
             if (_connections.Count == 0)
             {
@@ -64,8 +64,9 @@ namespace Assets.Code
             }
             else // otherwise go and find a random points that is not the one we just did being previous
             {
-                ConnectedWayPoints nextWaypoint;
+                ConnectedWayPoint nextWaypoint;
                 int nextIndex = 0;
+
                 do
                 {
                     nextIndex = UnityEngine.Random.Range(0, _connections.Count);
@@ -76,13 +77,6 @@ namespace Assets.Code
 
                 return nextWaypoint;
             }
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }
