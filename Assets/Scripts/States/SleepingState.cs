@@ -26,6 +26,6 @@ public class SleepingState : StateBase
     //update is called once per frame
     void update()
     {
-        GetComponent<Energy>().EnergyAmount += regenEnergySpeed * Time.deltaTime;
+        GetComponent<EnergyManager>().EnergyAmount += regenEnergySpeed * Time.deltaTime;
     }
 }
