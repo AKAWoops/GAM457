@@ -36,6 +36,19 @@ public class StateBase : MonoBehaviour
         stage = EVENT.ENTER;
         player = _player;
     }
+
+    public virtual void Enter() 
+    {
+        stage = EVENT.UPDATE;
+    }
+    public virtual void Update()
+    {
+        stage = EVENT.UPDATE;
+    }
+    public virtual void Exit()
+    {
+        stage = EVENT.EXIT;
+    }
    
     // Start is called before the first frame update
     void Start()
