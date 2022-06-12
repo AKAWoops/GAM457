@@ -8,10 +8,9 @@ public class EnergyManager : MonoBehaviour
 {
     [SerializeField]
     private int Energys = 10000;
-
     [SerializeField]
     public float EnergyAmount = 10;
-
+    [SerializeField]
     private int totalEnergy = 0;
 
     // Start is called before the first frame update
