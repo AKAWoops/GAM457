@@ -23,6 +23,7 @@ public class AIDrone : MonoBehaviour
         {
             case DroneState.Wander:
                 {
+                    //add trigger sound on enter state to see if it triggering to many times
                     if (NeedsDestination())
                     {
                         GetDestination();
@@ -54,6 +55,7 @@ public class AIDrone : MonoBehaviour
                 {
                     if (_target == null)
                     {
+                        //add trigger sound on enter state to see if it triggering to many times
                         _currentState = DroneState.Wander;
                         return;
                     }
@@ -69,6 +71,7 @@ public class AIDrone : MonoBehaviour
                 }
             case DroneState.Attack:
                 {
+                    //add trigger sound on enter state to see if it triggering to many times
                     if (_target != null)
                     {
                         Destroy(_target.gameObject);
