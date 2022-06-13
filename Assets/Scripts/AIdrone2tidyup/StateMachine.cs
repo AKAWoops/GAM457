@@ -34,7 +34,7 @@ public class StateMachine : MonoBehaviour
 
     private void SwitchToNewState(Type nextState)
     {
-        //i could inject on transition sound here would be better than having it on the drone state :-)
+        //i could inject on transition sound or emitter here would be better than having it on the drone state :-)
         CurrentState = _availableStates[nextState];
         OnStateChanged?.Invoke(CurrentState);
     }
