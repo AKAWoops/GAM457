@@ -1,18 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : MonoBehaviour
+public class AttackState : BaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    private float _attackReadyTimer;
+    private Drone _drone;
+
+    public AttackState(Drone drone) : base(drone.gameObject)
     {
-        
+        _drone = drone;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override Type Tick()
     {
-        
+        if (_drone.Target == null)
+            return typeof(WanderState);
+
+        _attackReadyTimer -= Time.deltaTime;
+
+        if (_attackReadyTimer <= 0f)
+        {
+            Debug.Log(message: "Attack!");
+            _drone.FireWeapon();
+        }
+        return null;
     }
 }

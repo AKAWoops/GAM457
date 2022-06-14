@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AiDrone2 : MonoBehaviour
+public class Drone : MonoBehaviour
 {
     [SerializeField]
     private Team _team;
@@ -14,7 +14,7 @@ public class AiDrone2 : MonoBehaviour
 
     public Team Team => _team;
 
-    public StateMachineBehaviour StateMachine => GetComponent<StateMachine>();
+    public StateMachine StateMachine => GetComponent<StateMachine>();
 
 
     private void Awake()
@@ -29,6 +29,9 @@ public class AiDrone2 : MonoBehaviour
             { typeof(WanderState), new WanderState( drone: this) },
             { typeof(ChaseState), new ChaseState( drone: this) },
             { typeof(AttackState), new AttackState( drone: this) }
+          //  { typeof(LowEnergyState), new LowEnergyState( Drone: this) }
+          //  { typeof(LookForFood), new LookForFood (drone: this) },
+          //  { typeof(EatFoodState), new EatFoodState( drone: this) }
         };
 
         GetComponent<StateMachine>().SetStates(states);
@@ -61,8 +64,7 @@ public class AiDrone2 : MonoBehaviour
         }
     }
 }
-
-public enum Team
+public enum Teams
 {
     Red,
     Blue,

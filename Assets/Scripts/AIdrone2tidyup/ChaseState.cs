@@ -1,18 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseState : MonoBehaviour
+public class ChaseState : BaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    private Drone _drone;
+
+    public ChaseState(Drone drone) : base(drone.gameObject)
     {
-        
+        _drone = drone;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override Type Tick()
     {
-        
+        if (_drone.Target == null)
+            return typeof(WanderState);
+
+        transform.LookAt(_drone.Target);
+        transform.Translate(translation: Vector3.forward * Time.deltaTime * DroneSettings.DroneSpeed);
+
+        var distance = Vector3.Distance(a: transform.position, b: _drone.Target.transform.position);
+        if (distance <= DroneSettings.AttackRange)
+        {
+            return typeof(AttackState);
+        }
+        return null;
+        // heads sore
     }
 }
+ 

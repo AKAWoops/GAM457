@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    private Dictionary<Types, BaseState> _availableStates;
+    private Dictionary<Type, BaseState> _availableStates;
 
     public BaseState CurrentState { get; private set; }
     public event Action<BaseState> OnStateChanged;
 
-    public void SetStates(Dictionary<Types, BaseState> states)
+    public void SetStates(Dictionary<Type, BaseState> states)
     {
         _availableStates = states;
 
@@ -26,7 +26,7 @@ public class StateMachine : MonoBehaviour
         var nextState = CurrentState?.Tick();
 
         if (nextState != null &&
-            nextState !+ CurrentState?.GetType())
+            nextState != CurrentState?.GetType())
         {
             SwitchToNewState(nextState);
         }
