@@ -1,14 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackState : BaseState
 {
     private float _attackReadyTimer;
-    private Drone _drone;
+    private AIDrone2 _drone;
 
-    public AttackState(Drone drone) : base(drone.gameObject)
+    public AttackState(AIDrone2 drone) : base(drone.gameObject)
     {
         _drone = drone;
     }
@@ -17,7 +15,8 @@ public class AttackState : BaseState
     {
         if (_drone.Target == null)
             return typeof(WanderState);
-
+// could posibly add if gets out of attack range go back to chase state
+// if my heallth is low run away 
         _attackReadyTimer -= Time.deltaTime;
 
         if (_attackReadyTimer <= 0f)

@@ -1,13 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChaseState : BaseState
 {
-    private Drone _drone;
+    private AIDrone2 _drone;
 
-    public ChaseState(Drone drone) : base(drone.gameObject)
+    public ChaseState(AIDrone2 drone) : base(drone.gameObject)
     {
         _drone = drone;
     }
@@ -26,7 +24,7 @@ public class ChaseState : BaseState
             return typeof(AttackState);
         }
         return null;
-        // heads sore
+        // heads sore not working goes through walls damn it has to be in this State
     }
 }
  

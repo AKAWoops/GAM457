@@ -13,7 +13,6 @@ public class StateMachine : MonoBehaviour
     public void SetStates(Dictionary<Type, BaseState> states)
     {
         _availableStates = states;
-
     }
 
     private void Update()
@@ -38,5 +37,4 @@ public class StateMachine : MonoBehaviour
         CurrentState = _availableStates[nextState];
         OnStateChanged?.Invoke(CurrentState);
     }
-
 }

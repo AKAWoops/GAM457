@@ -3,12 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drone : MonoBehaviour
+public class AIDrone2 : MonoBehaviour
 {
-    [SerializeField]
-    private Team _team;
-    [SerializeField]
-    private GameObject _laserVisual;
+    [SerializeField] private Team _team;
+    [SerializeField] private GameObject _laserVisual;
 
     public Transform Target { get; private set; }
 
@@ -29,7 +27,7 @@ public class Drone : MonoBehaviour
             { typeof(WanderState), new WanderState( drone: this) },
             { typeof(ChaseState), new ChaseState( drone: this) },
             { typeof(AttackState), new AttackState( drone: this) }
-          //  { typeof(LowEnergyState), new LowEnergyState( Drone: this) }
+          //  { typeof(LowEnergyState), new LowEnergyState( drone: this) }
           //  { typeof(LookForFood), new LookForFood (drone: this) },
           //  { typeof(EatFoodState), new EatFoodState( drone: this) }
         };
@@ -64,9 +62,3 @@ public class Drone : MonoBehaviour
         }
     }
 }
-public enum Teams
-{
-    Red,
-    Blue,
-}
-
