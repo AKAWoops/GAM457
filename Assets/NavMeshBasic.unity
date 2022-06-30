@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 1
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &68358698
 MonoBehaviour:
@@ -1111,7 +1111,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &68358700
 MeshRenderer:
@@ -1171,7 +1171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68358696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.288216, y: 5, z: -61.890266}
+  m_LocalPosition: {x: -13.288216, y: 4.61, z: -61.890266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2438,7 +2438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171395244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.355072, y: 5, z: -61.890266}
+  m_LocalPosition: {x: -7.355072, y: 4.61, z: -61.890266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2456,7 +2456,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &171395248
 MeshRenderer:
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 1
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &171395251
 MonoBehaviour:
@@ -2867,7 +2867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219221170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.676857, y: 4.7649426, z: 11.080002}
+  m_LocalPosition: {x: -8.676857, y: 4.61, z: 11.080002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2886,7 +2886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 0
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &219221173
 MonoBehaviour:
@@ -3801,7 +3801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 1
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &273504617
 MonoBehaviour:
@@ -3826,7 +3826,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &273504619
 MeshRenderer:
@@ -3886,7 +3886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273504615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.718216, y: 5, z: -61.890266}
+  m_LocalPosition: {x: -19.718216, y: 4.61, z: -61.890266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6556,54 +6556,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582700839}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &623453300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 623453302}
-  - component: {fileID: 623453301}
-  m_Layer: 0
-  m_Name: DroneSettings
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &623453301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623453300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89c34def5c422741bf98f49a2b8487e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  droneSpeed: 2
-  aggroRadius: 4
-  attackRange: 3
-  droneProjectilePrefab: {fileID: 0}
---- !u!4 &623453302
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623453300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -58.13028, y: -16.702812, z: 116.17768}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &635255856
 GameObject:
   m_ObjectHideFlags: 0
@@ -12341,7 +12293,7 @@ PrefabInstance:
     - target: {fileID: 8991123391126023673, guid: 7e1e034727d961140b323fe5653906ab, type: 3}
       propertyPath: droneProjectilePrefab
       value: 
-      objectReference: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e1e034727d961140b323fe5653906ab, type: 3}
 --- !u!1 &1235086962
@@ -13806,7 +13758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 1
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &1430671159
 MonoBehaviour:
@@ -13831,7 +13783,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1430671161
 MeshRenderer:
@@ -13891,7 +13843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430671157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.268219, y: 5, z: -61.890266}
+  m_LocalPosition: {x: -3.268219, y: 4.61, z: -61.890266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16143,7 +16095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604316982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.610001, y: 4.7649426, z: 11.080002}
+  m_LocalPosition: {x: -14.610001, y: 4.61, z: 11.080002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16162,7 +16114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 0
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &1604316985
 MonoBehaviour:
@@ -17637,7 +17589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701863428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.590004, y: 4.7649426, z: 11.080002}
+  m_LocalPosition: {x: -4.590004, y: 4.61, z: 11.080002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17656,7 +17608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 0
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &1701863431
 MonoBehaviour:
@@ -19189,7 +19141,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912370380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.04, y: 4.7649426, z: 11.08}
+  m_LocalPosition: {x: -21.04, y: 4.61, z: 11.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19208,7 +19160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027078b92be081b42945b294a6305003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _team: 0
+  _teams: 0
   _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &1912370383
 MonoBehaviour:

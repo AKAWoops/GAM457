@@ -6,8 +6,8 @@ using UnityEngine;
 public class WanderState : BaseState
 {
     private Vector3? _destination;//nullable vector 3 
-    private float stopDistance = 1.0f;
-    private float turnSpeed = 1.0f;
+    private float stopDistance = 1f;
+    private float turnSpeed = 1f;
     private readonly LayerMask _layerMask = LayerMask.NameToLayer("Walls");
     private float _rayDistance = 3.5f;
     private Quaternion _desiredRotation;
@@ -60,7 +60,7 @@ public class WanderState : BaseState
     private bool IsForwardBlocked()
     {
         Ray ray = new Ray(origin: transform.position, direction: transform.forward);
-        return Physics.SphereCast(ray, radius: 1.0f, _rayDistance, _layerMask);
+        return Physics.SphereCast(ray, radius: 0.5f, _rayDistance, _layerMask);
     }
 
     private bool IsPathBlocked()
@@ -74,11 +74,11 @@ public class WanderState : BaseState
         Vector3 testPosition = (transform.position + (transform.forward * 4.0f))
             + new Vector3(x: UnityEngine.Random.Range(-4.5f, 4.5f), y: 0f, z: UnityEngine.Random.Range(-4.5f, 4.5f));
 
-        _destination = new Vector3(testPosition.x, y: 1f, testPosition.z);
+        _destination = new Vector3(testPosition.x, y:1f, testPosition.z);
 
         _direction = Vector3.Normalize(_destination.Value - transform.position);
-        _direction = new Vector3(_direction.x, y: 0f, _direction.z);
-        _desiredRotation = Quaternion.LookRotation(_direction); //lmao i never called this quanternion statement never made it sucha spanner
+        _direction = new Vector3(_direction.x, y:0f, _direction.z);
+        _desiredRotation = Quaternion.LookRotation(_direction);//lmao i never called this quanternion statement never made it sucha spanner
        
         Debug.Log(message: "Got Direction");
     }
@@ -112,7 +112,7 @@ public class WanderState : BaseState
             }
             direction = stepAngle * direction;
            
-            // add this line in to fix my ai stupid idiot missed this line lmao _desiredRotation
+            // add this line in to fix my ai stupid idiot i am missed th line lmao _desiredRotation
 
         }
 

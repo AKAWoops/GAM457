@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class AiDrone2 : MonoBehaviour
 {
-    [SerializeField] private Teams _team;
+    [SerializeField] private Teams _teams;
     [SerializeField] private GameObject _laserVisual;
 
     public Transform Target { get; private set; }
 
-    public Teams Teams => _team;
+    public Teams Teams => _teams;
     
     public StateMachine StateMachine => GetComponent<StateMachine>();
 
