@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIDrone2 : MonoBehaviour
+public class AiDrone2 : MonoBehaviour
 {
     [SerializeField] private Team _team;
     [SerializeField] private GameObject _laserVisual;
@@ -22,6 +22,7 @@ public class AIDrone2 : MonoBehaviour
     {
         InitializeStateMachine();
     }
+    
 
     private void InitializeStateMachine()
     {
