@@ -5552,143 +5552,6 @@ Transform:
   m_Father: {fileID: 875901634}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 89.204, z: 0}
---- !u!1 &477734600
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 477734606}
-  - component: {fileID: 477734605}
-  - component: {fileID: 477734604}
-  - component: {fileID: 477734603}
-  - component: {fileID: 477734602}
-  - component: {fileID: 477734601}
-  m_Layer: 0
-  m_Name: Nodecanvastestcube (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &477734601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477734600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 362760ffd4bd46a41a85a01a835a1110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wanderSpeed: 1
-  chaseSpeed: 1
-  turnSpeed: 1
-  attackRange: 1
-  frenzyLevel: 1
-  detectionRange: 3
-  opponentLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  obstacleLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &477734602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477734600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da5c749a2f55f45b63da32f537c82b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aISettings: {fileID: 0}
-  _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
---- !u!65 &477734603
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477734600}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &477734604
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477734600}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &477734605
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477734600}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &477734606
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477734600}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -162.8, y: 0.9, z: 95.94}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &499973920
 GameObject:
   m_ObjectHideFlags: 0
@@ -10997,8 +10860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82da5c749a2f55f45b63da32f537c82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aISettings: {fileID: 0}
-  _laserVisual: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
 --- !u!114 &1054625512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11011,18 +10872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362760ffd4bd46a41a85a01a835a1110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderSpeed: 1
-  chaseSpeed: 1
-  turnSpeed: 1
-  attackRange: 1
-  frenzyLevel: 1
-  detectionRange: 3
-  opponentLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  obstacleLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &1054738335
 GameObject:
   m_ObjectHideFlags: 0
@@ -12444,7 +12293,7 @@ PrefabInstance:
     - target: {fileID: 8991123391126023673, guid: 7e1e034727d961140b323fe5653906ab, type: 3}
       propertyPath: droneProjectilePrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5446860722763756263, guid: fb155e03e004d78498e6a5b277709da6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e1e034727d961140b323fe5653906ab, type: 3}
 --- !u!1 &1235086962
@@ -17877,7 +17726,7 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"IsPlayerInAttackRange":{"_name":"IsPlayerInAttackRange","_id":"8fcf6973-1089-469d-9f5d-36aa69e30204","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"CanAttack":{"_name":"CanAttack","_id":"7ee22ea6-ca31-4b8d-9149-d5abc536ab6b","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"DoesPlayerHaveEnergy":{"_name":"DoesPlayerHaveEnergy","_id":"ed778c9a-961a-47df-baa7-b16364b5acc0","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"LieDown":{"_name":"LieDown","_id":"202ef1b8-f5e9-4fdf-b637-e1698ffd485b","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"LieDown":{"_value":true,"_name":"LieDown","_id":"202ef1b8-f5e9-4fdf-b637-e1698ffd485b","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
   _serializedVariables:
@@ -17902,7 +17751,7 @@ MonoBehaviour:
   - _json: '{"_name":"DoesPlayerHaveEnergy","_id":"ed778c9a-961a-47df-baa7-b16364b5acc0","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_name":"LieDown","_id":"202ef1b8-f5e9-4fdf-b637-e1698ffd485b","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+  - _json: '{"_value":true,"_name":"LieDown","_id":"202ef1b8-f5e9-4fdf-b637-e1698ffd485b","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
 --- !u!114 &1719781765
