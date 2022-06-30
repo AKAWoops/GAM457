@@ -4,9 +4,9 @@ using UnityEngine;
 public class AttackState : BaseState
 {
     private float _attackReadyTimer;
-    private AIDrone2 _drone;
+    private AiDrone2 _drone;
 
-    public AttackState(AIDrone2 drone) : base(drone.gameObject)
+    public AttackState(AiDrone2 drone) : base(drone.gameObject)
     {
         _drone = drone;
     }

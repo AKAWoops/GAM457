@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class ChaseState : BaseState
 {
-    private AIDrone2 _drone;
+    private AiDrone2 _drone;
 
-    public ChaseState(AIDrone2 drone) : base(drone.gameObject)
+    public ChaseState(AiDrone2 drone) : base(drone.gameObject)
     {
         _drone = drone;
     }
