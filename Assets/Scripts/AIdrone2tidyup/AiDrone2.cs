@@ -11,7 +11,10 @@ public class AIDrone2 : MonoBehaviour
     public Transform Target { get; private set; }
 
     public Team Team => _team;
-
+    /// <summary>
+    /// update
+    /// 
+    /// </summary>
     public StateMachine StateMachine => GetComponent<StateMachine>();
 
 
