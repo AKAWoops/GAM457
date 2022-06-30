@@ -79,7 +79,7 @@ public class WanderState : BaseState
         _direction = Vector3.Normalize(_destination.Value - transform.position);
         _direction = new Vector3(_direction.x, y:0f, _direction.z);
         _desiredRotation = Quaternion.LookRotation(_direction);//lmao i never called this quanternion statement never made it sucha spanner
-       
+
         Debug.Log(message: "Got Direction");
     }
 
@@ -96,7 +96,7 @@ public class WanderState : BaseState
             if (Physics.Raycast(origin: pos, direction, out hit, DroneSettings.AggroRadius))
             {
                 var drone = hit.collider.GetComponent<AiDrone2>();
-                if (drone != null && drone.Teams != gameObject.GetComponent<AiDrone2>().Teams)
+                if (drone != null && drone.Team != gameObject.GetComponent<AiDrone2>().Team)
                 {
                     Debug.DrawRay(start: pos, dir: _direction * hit.distance, Color.red);
                     return drone.transform;
@@ -111,7 +111,7 @@ public class WanderState : BaseState
                 Debug.DrawRay(start: pos, dir: direction * DroneSettings.AggroRadius, Color.white);
             }
             direction = stepAngle * direction;
-           
+            
             // add this line in to fix my ai stupid idiot i am missed th line lmao _desiredRotation
 
         }
