@@ -10,13 +10,12 @@ public class WanderState : BaseState
     private float turnSpeed = 1f;
     //private readonly LayerMask _layerMask = LayerMask.NameToLayer("Walls");
     //private readonly int _layerMask = 1 << 8;
-    int _layerMask = 1<< 8;
+    LayerMask _layerMask = 1 << 8; // found this fixes the layer mask issue
     private float _rayDistance = 3.5f;
     private Quaternion _desiredRotation;
     private Vector3 _direction;
     private AiDrone2 _drone;
     
-
     public WanderState(AiDrone2 drone) : base(drone.gameObject)
     {
         _drone = drone;
