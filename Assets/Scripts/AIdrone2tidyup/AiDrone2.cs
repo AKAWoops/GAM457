@@ -7,7 +7,7 @@ public class AiDrone2 : MonoBehaviour
 {
     [SerializeField] private Team _team;
     [SerializeField] private GameObject _laserVisual;
-
+    
     public Transform Target { get; private set; }
 
     public Team Team => _team;
@@ -23,11 +23,12 @@ public class AiDrone2 : MonoBehaviour
 
     private void InitializeStateMachine()
     {
-        var states = new Dictionary<Type, BaseState>()
-        {
-            { typeof(WanderState), new WanderState( drone: this) },
-            { typeof(ChaseState), new ChaseState( drone: this) },
-            { typeof(AttackState), new AttackState( drone: this) }
+        var states = new Dictionary<Type, BaseState>()//states dictionary give you intialized states below 
+        {   //the reason i have chosen this way is i want to keep a single wander state and re use it saves on recreating new states all the time.
+            // removes ineficiencies 
+            { typeof(WanderState), new WanderState( this) },
+            { typeof(ChaseState), new ChaseState( this) },
+            { typeof(AttackState), new AttackState( this) }
           //  { typeof(LowEnergyState), new LowEnergyState( drone: this) }
           //  { typeof(LookForFood), new LookForFood (drone: this) },
           //  { typeof(EatFoodState), new EatFoodState( drone: this) }
@@ -45,8 +46,8 @@ public class AiDrone2 : MonoBehaviour
     {
         _laserVisual.transform.position = (Target.position + transform.position) / 2f;
 
-        float distance = Vector3.Distance(a: Target.position, b: transform.position);
-        _laserVisual.transform.localScale = new Vector3(x: 0.1f, y: 0.1f, z: distance);
+        float distance = Vector3.Distance( Target.position, transform.position);
+        _laserVisual.transform.localScale = new Vector3( 0.1f,  0.1f, distance);
         _laserVisual.SetActive(value: true);
 
         StartCoroutine(TurnOffLaser());
@@ -63,9 +64,9 @@ public class AiDrone2 : MonoBehaviour
         }
     }
 }
-/*
+
 public enum Team
 {
     Red,
     Blue
-}*/
+}

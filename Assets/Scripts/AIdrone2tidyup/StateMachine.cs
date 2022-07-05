@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 public class StateMachine : MonoBehaviour
-{
+{   // all states that state machine can use or are available
     private Dictionary<Type, BaseState> _availableStates;
 
     public BaseState CurrentState { get; private set; }
@@ -22,7 +22,7 @@ public class StateMachine : MonoBehaviour
             CurrentState = _availableStates.Values.First();
         }
 
-        var nextState = CurrentState?.Tick();
+        var nextState= CurrentState?.Tick();
 
         if (nextState != null &&
             nextState != CurrentState?.GetType())

@@ -12,6 +12,5 @@ public abstract class BaseState
     }
     protected GameObject gameObject;
     protected Transform transform;
-
     public abstract Type Tick();
 }

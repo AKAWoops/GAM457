@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class AIDrone : MonoBehaviour
 {
-    public Team Team => _team;
-    [SerializeField] private Team _team;
+    public Teams Teams => _team;
+    [SerializeField] private Teams _team;
     [SerializeField] private LayerMask _layerMask;
 
     private float _attackRange = 3f;
@@ -138,7 +138,7 @@ public class AIDrone : MonoBehaviour
             if (Physics.Raycast(origin: pos, direction, out hit, aggroRadius))
                 {
                 var drone = hit.collider.GetComponent<AIDrone>();
-                if (drone != null && drone.Team != gameObject.GetComponent<AIDrone>().Team)
+                if (drone != null && drone.Teams != gameObject.GetComponent<AIDrone>().Teams)
                 {
                     Debug.DrawRay(start: pos, dir: direction * hit.distance, Color.red);
                     return drone.transform;
@@ -160,7 +160,7 @@ public class AIDrone : MonoBehaviour
 }
 }
     
-    public enum Team
+    public enum Teams
     {
         Red,
         Blue

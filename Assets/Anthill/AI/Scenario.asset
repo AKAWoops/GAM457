@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f22e7053ea04ed0922308786facc8c, type: 3}
+  m_Name: Scenario
+  m_EditorClassIdentifier: 
+  conditions:
+    list:
+    - id: 0
+      name: Alive
+    - id: 1
+      name: Injured
+    - id: 2
+      name: EnemyAlive
+    - id: 3
+      name: SeeWeapon
+    - id: 4
+      name: SeeAmmo
+    - id: 5
+      name: SeeBomb
+    - id: 6
+      name: SeeHeal
+    - id: 7
+      name: SeeEnemy
+    - id: 8
+      name: InLinOfFire
+    - id: 9
+      name: NearEnemy
+    - id: 10
+      name: HasWeapon
+    - id: 11
+      name: HasAmmo
+    - id: 12
+      name: HasBomb
+  actions:
+  - name: ' Search For Weapon'
+    isDefault: 0
+    state: {fileID: 0}
+    cost: 0
+    position: {x: 265, y: 94}
+    pre:
+    - id: 10
+      value: 0
+    - id: 12
+      value: 0
+    post:
+    - id: 3
+      value: 1
+  - name: Pickup Weapon
+    isDefault: 0
+    state: {fileID: 0}
+    cost: 0
+    position: {x: 498, y: 88}
+    pre:
+    - id: 3
+      value: 1
+    - id: 10
+      value: 0
+    post:
+    - id: 11
+      value: 1
+    - id: 3
+      value: 0
+    - id: 12
+      value: 0
+  - name: Search For Ammo
+    isDefault: 0
+    state: {fileID: 0}
+    cost: 0
+    position: {x: 704, y: 88}
+    pre:
+    - id: 10
+      value: 1
+    - id: 11
+      value: 0
+    post:
+    - id: 4
+      value: 1
+  - name: Pickup Ammo
+    isDefault: 0
+    state: {fileID: 0}
+    cost: 0
+    position: {x: 912, y: 94}
+    pre:
+    - id: 10
+      value: 1
+    - id: 11
+      value: 0
+    - id: 4
+      value: 1
+    post:
+    - id: 11
+      value: 1
+    - id: 4
+      value: 0
+  - name: Scout With Weapon
+    isDefault: 0
+    state: {fileID: 0}
+    cost: 0
+    position: {x: 1120, y: 96}
+    pre:
+    - id: 10
+      value: 1
+    - id: 11
+      value: 1
+    - id: 7
+      value: 0
+    post:
+    - id: 7
+      value: 1
+  - name: Aiming
+    isDefault: 0
+    state: {fileID: 0}
+    cost: 0
+    position: {x: 1329, y: 102}
+    pre:
+    - id: 10
+      value: 1
+    - id: 11
+      value: 1
+    - id: 7
+      value: 1
+    - id: 8
+      value: 0
+    post:
+    - id: 8
+      value: 1
+  - name: Attack With Weapon
+    isDefault: 0
+    state: {fileID: 0}
+    cost: 0
+    position: {x: 1553, y: 95}
+    pre:
+    - id: 10
+      value: 1
+    - id: 11
+      value: 1
+    - id: 7
+      value: 1
+    - id: 8
+      value: 1
+    post:
+    - id: 2
+      value: 0
+    - id: 7
+      value: 0
+    - id: 8
+      value: 0
+  goals:
+  - name: Kill Enemy
+    isDefault: 1
+    position: {x: 249, y: 458}
+    conditions:
+    - id: 2
+      value: 0
+  worldStates:
+  - position: {x: 216, y: 623}
+    isAutoUpdate: 1
+    list:
+    - id: 0
+      value: 1
+    - id: 1
+      value: 0
+    - id: 2
+      value: 1
+    - id: 3
+      value: 1
+    - id: 4
+      value: 1
+    - id: 5
+      value: 0
+    - id: 6
+      value: 0
+    - id: 7
+      value: 0
+    - id: 8
+      value: 0
+    - id: 9
+      value: 0
+    - id: 10
+      value: 1
+    - id: 11
+      value: 0
+    - id: 12
+      value: 0

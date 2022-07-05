@@ -16,15 +16,16 @@ public class ChaseState : BaseState
             return typeof(WanderState);
 
         transform.LookAt(_drone.Target);
-        transform.Translate(translation: Vector3.forward * Time.deltaTime * DroneSettings.DroneSpeed);
+        transform.Translate(Vector3.forward * Time.deltaTime * GameSettings.DroneSpeed);
 
-        var distance = Vector3.Distance(a: transform.position, b: _drone.Target.transform.position);
-        if (distance <= DroneSettings.AttackRange)
+        var distance = Vector3.Distance( transform.position,_drone.Target.transform.position);
+        if (distance <= GameSettings.AttackRange)
         {
             return typeof(AttackState);
         }
         return null;
         // heads sore not working goes through walls damn it has to be in this State
+        // have adjusted layer mask but still going through walls on normal layermask settings I made I have a typo somewhere bah
     }
 }
  

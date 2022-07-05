@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Anthill.AI;
+using Anthill.Utils;
 
-public class LookForFood : MonoBehaviour
+public class HealthLow : AntAIState
 {
     // Start is called before the first frame update
     void Start()

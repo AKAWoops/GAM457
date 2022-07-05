@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4446764868616194869}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -62.857372, y: 13.228326, z: 72.70344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89c34def5c422741bf98f49a2b8487e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneSpeed: 2
-  aggroRadius: 4
+  droneSpeed: 2.5
+  aggroRadius: 8
   attackRange: 3
   droneProjectilePrefab: {fileID: 0}
