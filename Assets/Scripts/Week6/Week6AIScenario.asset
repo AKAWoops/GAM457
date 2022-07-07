@@ -25,7 +25,7 @@ MonoBehaviour:
     isDefault: 0
     state: {fileID: 3960884295941972121, guid: f30116de625c33744a3f0e22b0ad1aeb, type: 3}
     cost: 0
-    position: {x: 731, y: 384}
+    position: {x: 698, y: 386}
     pre:
     - id: 1
       value: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     isDefault: 0
     state: {fileID: 4509380705575944272, guid: 7718779d3759e9b4b9fdb0f33ade77bc, type: 3}
     cost: 0
-    position: {x: 501, y: 387}
+    position: {x: 486, y: 384}
     pre:
     - id: 0
       value: 0
